@@ -310,8 +310,7 @@ The user's experience will likely satisfy 1 criteria ['Scholarly_articles'] for 
 More information is needed in 4 criteria ['Awards', 'Original_contribution', 'Critical_employment', 'High_remuneration'] to see if O-1A requirements could be met.
 ```
 
-### Evaluate examples (In Progress)
-Due to time constraint, current implementation only evaluate one resume file, for one assessment workflow at a time.
+### Evaluate examples (Not Implemented)
 ```bash
   cd ALMA_20240829
   conda activate ALMA
