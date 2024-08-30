@@ -3,7 +3,7 @@ Prepared by Andy Wong
 
 ## Shortcuts
 - [O-1A Qualification Assessment Workflow](#O-1A-Qualification-Assessment-Workflow).
-- [Design Choices: Rationale and Implementation](#Design-Choices:-Rationale-and-Implementation).
+- [Design Choices Rationale and Implementation](#Design-Choices-Rationale-and-Implementation).
 - [Additional Thoughts](#Additional-Thoughts).
 - [How to evaluate the output?](#How-to-evaluate-the-output?).
 - [Instruction](#Instruction).
@@ -70,7 +70,7 @@ The primary business objectives are:
     - **Work in progress**:
 
 
-## Design Choices: Rationale and Implementation
+## Design Choices Rationale and Implementation
 
 ### Implementation Focus
 The application is designed with scalability and future improvements in mind. The architecture supports the easy integration of criterion-specific workflows, allowing the system to adapt to updated criteria and evolving requirements. This forward-thinking approach ensures that the application remains flexible and robust, enabling seamless enhancements without overhauling the entire system. For more details, see the [Potential Improvements](#potential-improvement) section.
