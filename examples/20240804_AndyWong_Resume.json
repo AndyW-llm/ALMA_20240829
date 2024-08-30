@@ -1,0 +1,50 @@
+{
+  "workflow": "label",
+  "contents": "",
+  "extracted_content_dict": {
+    "Awards": [
+      "Henry A. Jastro Research Award",
+      "SPUR Research award",
+      "Cal Alumni Association Leadership Award"
+    ],
+    "Membership": [],
+    "Press": [],
+    "Judging": [],
+    "Original_contribution": [
+      "Knowledge-Guided Recurrent Neural Networks for Monthly Forest Carbon Uptake Estimation",
+      "Multiscale Assessment of Agricultural Consumptive Water Use in California’s Central Valley"
+    ],
+    "Scholarly_articles": [
+      "Knowledge-Guided Recurrent Neural Networks for Monthly Forest Carbon Uptake Estimation",
+      "Multiscale Assessment of Agricultural Consumptive Water Use in California’s Central Valley"
+    ],
+    "Critical_employment": [
+      "Led R&D to enhance LLM question answering capabilities, handling up to 190 pages of contexts.",
+      "Enhanced the QA capabilities of GPT-4o mini and Llama-3.1 8B by over 17%, achieving comparable performance to GPT-4o on the Lv.1 QA task of the 'Loong' benchmark.",
+      "Developing business applications for long-context LLMs, including support for debt collection efforts in the financial inclusion department.",
+      "Researched and developed pre-training and fine-tuning procedures for long-context LLMs.",
+      "Curated a collection (n ≈180k) of SEC 10-K financial reports (length ≈80k tokens) for this project.",
+      "Created a long-document processing workflow using GPT-4o to generate synthetic training datasets.",
+      "Built interactive demos with Streamlit to compare outputs from models and workflows.",
+      "Reduced the resources required for fine-tuning a long-context LLM model by 75%.",
+      "Co-developed PingAn-GPT with bloomz 7B - 176B model for customer service.",
+      "Combined Faiss and BM25 to assist in manual filtering of advertisements and duplicate content in a customer service instruction fine-tune dataset.",
+      "Implemented and evaluated the feasibility of using GPT-3.5 and 4 to grade or compare other LLM responses, particularly for finance-focused questions, accelerating iterative cycles of reinforcement learning with human feedback (RLHF) and RAG database expansion.",
+      "Co-validated the in-house RLHF algorithm and model outputs for LLM brainstorming tasks.",
+      "Led the development of a modeling framework to predict crop yield for insurance and commodity trading.",
+      "Predicted NDVI, a crop health indicator, with an RMSE<5%, two days ahead of USDA public release, aiding commodity trading.",
+      "Insurance partner tested the product to verify crop loss claims and found a micro-F1 > 0.8 in severity classification across experimental regions.",
+      "Built a pipeline to process petabytes of satellite and weather imagery into spatiotemporal features.",
+      "Experimented with RFR, k-NN, CNN, and Transformers for crop health and yield prediction.",
+      "Designed and developed technologies for the forest carbon sinks index insurance [COP27].",
+      "Lab awarded in 2022 by the headquarters for contributions to business innovation.",
+      "Won second place among 427 teams at the Ping An Group Public Welfare Innovation Competition in 2021.",
+      "Experimental model outperformed the state-of-the-art process-based model on site-wise estimation over three major forest types across the US and China, demonstrating potential to replace NASA’s MOD17A2HGF product.",
+      "Built a high-resolution (10m) data analytics pipeline to estimate monthly forest productivity, providing anomaly alerts and streamlining claim processing.",
+      "Developed a knowledge-guided RNN model to estimate monthly forest productivity."
+    ],
+    "High_remuneration": [
+      "Tax returns, pay statements, or other evidence of past salary or remuneration for services."
+    ]
+  }
+}
