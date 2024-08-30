@@ -142,18 +142,55 @@ The assessment process is designed to evaluate each accomplishment and current j
   Future work should compare these approach against simpler implementations, evaluating them based on metrics such as reliability, cost, and latency.
 
 
-## How to evaluate the output?
-### sucess in retreival 
-###  accuracy/precision/recall in ratings
-### cost (in terms of tokens)
-###  latency/throughput
-###  Additional consideration: 
-  - balanced dataset (should collect a variety of failed cases, especially those near the decision boundary)
+## How to Evaluate the Output?
+
+### Retrieval
+  - A standard workflow of RAG system evaluation can be employed to evaluate the reliability of the structured outputs and ratings. This includes:
+    - Utilizing various metrics described in the [RAG system evaluation](https://docs.databricks.com/en/generative-ai/tutorials/ai-cookbook/evaluate-assess-performance.html), many of which are applicable to this application.
+    - The most critical metrics for the first stage are **Precision (chunk_relevance)** and **Recall (document_recall)**.
+
+### Rating Accuracy/Precision/Recall/F1 Score
+  - The standard workflow of multi-class classification can be used to evaluate rating reliability, encompassing the following metrics and tools:
+    - **Confusion Matrix:**  
+      A visualization tool for organizing true positives (TP), false positives (FP, type 1 error), true negatives (TN), and false negatives (FN, type 2 error) metrics for each class.
+    - **Accuracy:**  
+      Calculated as (TP + TN) / (TP + TN + FP + FN); this represents the proportion of observations that were correctly classified.
+    - **Precision:**  
+      Calculated as TP / (TP + FP); this metric represents the proportion of actual positive observations that were predicted positive by the classifier.
+    - **Recall (Sensitivity):**  
+      Calculated as TP / (TP + FN); this metric represents the percentage of total positive cases captured out of all positive cases.
+    - **F1 Score:**  
+      Calculated as F1 = 2 * (Precision * Recall) / (Precision + Recall); the F1 score is the harmonic mean of precision and recall, ideal when both metrics are equally important.
+    - **Receiver Operating Characteristic (ROC) Curve:**  
+      This curve plots the true positive rate (TPR) against the false positive rate (FPR) for various thresholds. Lowering the threshold increases both TPR (TP / (TP + FN) = Specificity) and FPR (FP / (FP + TN) = Sensitivity), as FN and TN decrease due to fewer negative predictions by the model.  
+      - To leverage this metric, we could instruct the LLM during Stage 2 to output the probability for each possible outcome: "Pass," "Reject," or "More information needed." Then, refer to the conditional rules outlined in Stage 3 to approximate the probability for each class ("High," "Medium," "Low").
+      - Alternatively, Stage 3 could be modified into an LLM inference step, using [log-prob](https://cookbook.openai.com/examples/using_logprobs) as an approximation of probability.
+    - **Cross-Entropy:**  
+      Similar to ROC, cross-entropy could be computed if the probability for classes "High," "Medium," and "Low" can be approximated.
+    - For code implementation, refer to this [resource](https://github.com/HarshaGoonewardana/Evaluating-Multi-Class-Classifiers/blob/master/Multi_Class_Evaluation_Metrics.ipynb) on evaluating multi-class classification models.
+
+### Cost (in terms of tokens)
+  - Reducing the deployment cost of this application is crucial for business success. 
+  - One may modify this [notebook](https://cookbook.openai.com/examples/how_to_count_tokens_with_tiktoken) to estimate token costs for different workflow implementations.
+
+### Latency/Throughput
+  - Reducing latency might improve user retention in theory. However, for non-time-sensitive and high-error-cost use cases like this application, other strategies (e.g., progress bars, stream decoding of intermediate output, or short ads about ALMA) could also be effective.
+  - Throughput becomes relevant when fine-tuning the model.
+
+### Additional Considerations
+  - **Judging Intermediate and Final Outputs:**  
+    `GPT-4 turbo/omni` could be used for evaluating these outputs. For example:
+    - **Picking Better Responses:**  
+      My intern and teammate recently published a [framework](https://github.com/shenghh2015/llm-judge-eval) for evaluating different LLM-as-a-judge in LLM alignment tasks.
+    - **Comparison with Reference Answers:**  
+      My current work builds on the [Loong benchmark](https://github.com/MozerWang/Loong/tree/main), which uses `GPT-4 turbo` to grade LLM answers against reference answers.
+  - **Data Collection for Future Iterations:**  
+    In future iterations, when collecting resume examples and labels, we should aim for a balanced mix of accepted and rejected cases, with a special focus on obtaining data with borderline acceptance.
 
 
 ## Instruction
 
-## #installation
+### installation
 #### Create a conda environment with `Python 3.10`:
 ``` bash
   conda create --name ALMA python=3.10

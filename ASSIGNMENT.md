@@ -21,13 +21,13 @@ This rough assessment is usually done using a person’s CV and the expectation 
 
 ## Tech Requirements
 
-- [ ] Create a system design to fulfill the above requirements
-- [ ] Implement an API that takes the input of a CV as a file and produces the two things described above
-- [ ] Use FastAPI to implement the endpoint
+- [x] Create a system design to fulfill the above requirements
+- [x] Implement an API that takes the input of a CV as a file and produces the two things described above
+- [x] Use FastAPI to implement the endpoint
 
 ## Submission Guidance
 
 - [x] Submit your code to a publicly available github repo
-- [ ] Submit a [document](/README.md) on why/how you make design choices and how to evaluate the output in the same repo
-- [ ] Any additional documents that could help us understand the application better in the same repo
-- [ ] Send an email to [shuo@tryalma.ai](mailto:shuo@tryalma.ai) with the github link within 24 hours since you start the exercise
+- [x] Submit a [document](README.md) on why/how you make design choices and how to evaluate the output in the same repo
+- [x] Any [additional documents](README.md) that could help us understand the application better in the same repo
+- [x] Send an email to [shuo@tryalma.ai](mailto:shuo@tryalma.ai) with the github link within 24 hours since you start the exercise
