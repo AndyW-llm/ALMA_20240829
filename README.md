@@ -5,7 +5,7 @@ Prepared by Andy Wong
 - [O-1A Qualification Assessment Workflow](#O-1A-Qualification-Assessment-Workflow).
 - [Design Choices Rationale and Implementation](#Design-Choices-Rationale-and-Implementation).
 - [Additional Thoughts](#Additional-Thoughts).
-- [How to evaluate the output?](#How-to-evaluate-the-output?).
+- [How to evaluate the output?](#How-to-evaluate-the-output).
 - [Instruction](#Instruction).
 
 ## Product Objective
@@ -142,7 +142,7 @@ The assessment process is designed to evaluate each accomplishment and current j
   Future work should compare these approach against simpler implementations, evaluating them based on metrics such as reliability, cost, and latency.
 
 
-## How to Evaluate the Output?
+## How to Evaluate the Output
 
 ### Retrieval
   - A standard workflow of RAG system evaluation can be employed to evaluate the reliability of the structured outputs and ratings. This includes:
