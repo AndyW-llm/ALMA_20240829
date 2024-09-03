@@ -185,7 +185,7 @@ The assessment process is designed to evaluate each accomplishment and current j
     - **Comparison with Reference Answers:**  
       My current work builds on the [Loong benchmark](https://github.com/MozerWang/Loong/tree/main), which uses `GPT-4 turbo` to grade LLM answers against reference answers.
   - **Data Collection for Future Iterations:**  
-    In future iterations, when collecting resume examples and labels, we should aim for a balanced mix of accepted and rejected cases, with a special focus on obtaining data with borderline acceptance.
+    In future iterations, when collecting resume examples and labels, we should aim for a balanced mix of accepted and rejected cases for training, with a special focus on obtaining data with borderline acceptance. But for evaluation, we should aim match with real-world distribution.
 
 
 ## Instruction
